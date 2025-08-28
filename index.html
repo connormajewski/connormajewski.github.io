@@ -16,25 +16,22 @@
 		
 		
 		<div class="Snap-Container">
-			<div class="Section">
-				<div class="Section-Text">
-					<h1>Connor Majewski</h1>
-					
-					<p>
-						Hi, my name is Connor Majewski.
-					</p>
-					
-					<p>
-						I'm a computer science graduate currently looking for work.
-					</p>
-					
-					<p>
-						This site is a way for me to showcase some of the projects and hobbies I have worked on.
-					</p>
-					
-					<p>
-						I hope you enjoy.
-					</p>
+			<div class="Section" id="Top-Level">
+				
+				<div class="Section-Images" id="Top-Level">
+				
+					<div class="carousel-track" id="Top-Level">
+					<div class="text">
+						<h1>Connor Majewski</h1>
+						<p>Hi, my name is Connor Majewski. </p>
+						<p>I'm a computer science graduate currently looking for work. </p>
+						<p>This site is a way for me to showcase some of the projects and hobbies I have worked on.</p>
+						<p>I hope you enjoy.</p>
+					</div>
+					<img src="media/headshot.jpg" alt="Headshot">
+					<img src="media/subway.jpg" alt="Subway">
+					<img src="media/beach.jpg" alt="Beach">
+				  </div>
 				</div>
 				
 			</div>
@@ -55,10 +52,9 @@
 				<div class="Section-Images">
 					<div class="carousel-track">
 					<video src="media/ebay.mp4#t=0.001" controls muted loop playsinline></video>
-					<img src="media/modelmanager1.jpg" alt="Model Manager 1">
-					<img src="media/modelmanager2.jpg" alt="Model Manager 2">
-					<img src="media/modelmanager3.jpg" alt="Model Manager 3">
-					<img src="media/modelmanager4.jpg" alt="Model Manager 4">
+					<img src="media/models3.jpg" alt="Model Collection 1">
+					<img src="media/models2.jpg" alt="Model Collection 2">
+					<img src="media/models1.jpg" alt="Model Collection 3">
 				  </div>
 				</div>
 
@@ -136,7 +132,7 @@
 				
 				 function updateText(){
 				 
-					if(isScreenLarge.matches || isScreenComputer.matches){
+					if(isScreenLarge.matches){
 					
 						modelText.innerHTML = "I recently built a desktop application to manage a collection of over 4,000 scale models. I spent weeks collecting information on each model before turning everything into a functional database. I used customtkinter to create a GUI to view and edit the database, and wrote a small library to use Ebay API calls to allow models to be listed for sale directly from within the app. Results can then be exported to an xlsx file for viewing and sharing."
 						shapeText.innerHTML = "I used the SDL2 library to create a shape inspector tool, to learn about simple graphics programming. Shapes can be rotated and brought closer or further from the screen. Even though this is a pretty basic project, I still had a lot of fun with it."

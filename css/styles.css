@@ -9,6 +9,8 @@ html{
 		
 	background-color: #ffffff;
 	overflow: hidden;
+	
+
 }
 
 #Links, .Section{
@@ -54,9 +56,12 @@ html{
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: auto;
+  
+  
 }
 
 .Section{
+
 
 	margin-top: 20%;
 	padding-top: 1%;
@@ -89,6 +94,8 @@ html{
 	text-decoration: underline;
 }
 
+
+
 @media (max-width: 1000px){
 	
 	#Links, .Section{
@@ -103,6 +110,7 @@ html{
 	
 	#Links{
 			margin-top: 10%;
+			
 	}
 	
 	#Links p{
@@ -113,7 +121,7 @@ html{
 
 	#Links p a{
 		
-		font-size: 20px;
+		font-size: 15px;
 		text-decoration: none;
 		color: black;
 		
@@ -129,6 +137,7 @@ html{
 
 		height: 100vh;
 		scroll-snap-align: start;
+
 	
 	}
 
@@ -159,23 +168,9 @@ html{
 		  width: 100%;
 	}
 	
-	.carousel-track {
-	  display: flex;
-	}
+	.Section-Images#Top-Level{
 
-	.carousel-track img, .carousel-track video {
-	  flex: 0 0 100%;       
-	  height: 30vh;
-	  width: 100%;
-	  scroll-snap-align: center;
-	  object-fit: contain;    
-	}
-}
-
-@media (min-width: 501px) and (max-width: 1000px){
-	.Section-Images{
-
-		  height: 40vh;                   
+		  height: 60vh;                   
 		  overflow-x: auto;                
 		  scroll-snap-type: x mandatory;    
 		  -webkit-overflow-scrolling: touch;
@@ -186,7 +181,34 @@ html{
 	  display: flex;
 	}
 
-	.carousel-track img, .carousel-track video {
+	.carousel-track img, .carousel-track video, .carousel-track .text{
+	  flex: 0 0 100%;       
+	  height: 30vh;
+	  width: 100%;
+	  scroll-snap-align: center;
+	  object-fit: contain;    
+	}
+	
+	.carousel-track#Top-Level img{
+		height: 60vh;
+	}
+}
+
+@media (min-width: 501px) and (max-width: 1000px){
+	.Section-Images{
+
+		  height: 45vh;                   
+		  overflow-x: auto;                
+		  scroll-snap-type: x mandatory;    
+		  -webkit-overflow-scrolling: touch;
+		  width: 100%;
+	}
+	
+	.carousel-track {
+	  display: flex;
+	}
+
+	.carousel-track img, .carousel-track video, .carousel-track .text {
 	  flex: 0 0 100%;       
 	  height: 40vh;
 	  width: 100%;
@@ -227,7 +249,7 @@ html{
 		height: 100vh;
 		scroll-snap-align: start;
 		display: flex;
-		
+
 	}
 
 	.Section h1 {
@@ -261,11 +283,29 @@ html{
 		  margin-left: 10%;
 	}
 	
+	#Top-Level.Section-Images{
+
+		  height: 65vh;                   
+		  overflow-x: auto;                
+		  scroll-snap-type: x mandatory;    
+		  -webkit-overflow-scrolling: touch;
+		  width: 100%;
+		  margin-left: 0%;
+	}
+	
 	.carousel-track {
 	  display: flex;
 	}
 
-	.carousel-track img, .carousel-track video {
+	.carousel-track img, .carousel-track video, .carousel-track .text {
+	  flex: 0 0 100%;       
+	  height: 60vh;
+	  width: 100%;
+	  scroll-snap-align: center;
+	  object-fit: contain;    
+	}
+	
+	.carousel-track#Top-Level img {
 	  flex: 0 0 100%;       
 	  height: 60vh;
 	  width: 100%;
@@ -307,6 +347,7 @@ html{
 		height: 100vh;
 		scroll-snap-align: start;
 		display: flex;
+
 		
 	}
 
@@ -338,14 +379,25 @@ html{
 		  scroll-snap-type: x mandatory;    
 		  -webkit-overflow-scrolling: touch;
 		  width: 100%;
-		  margin-left: 10%;
+		  margin-left: 0%;
+	}
+	
+	.Section-Images #Top-Level{
+
+		  height: 65vh;                   
+		  overflow-x: auto;                
+		  scroll-snap-type: x mandatory;    
+		  -webkit-overflow-scrolling: touch;
+		  width: 100%;
+		  
+		  
 	}
 	
 	.carousel-track {
 	  display: flex;
 	}
 
-	.carousel-track img, .carousel-track video {
+	.carousel-track img, .carousel-track video, .carousel-track .text {
 	  flex: 0 0 100%;       
 	  height: 60vh;
 	  width: 100%;

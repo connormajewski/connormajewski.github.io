@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Connor Majewski</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	
+	<body>
+		<div id="Links">
+			<p><a href="https://github.com/connormajewski?tab=repositories" target="blank">Github</a></p>
+			<p><a href="media/resume.pdf">Resume</a></p>
+			<p><a href="mailto:cmajews2@gmail.com">Email</a></p>
+		</div>
+		
+		
+		
+		<div class="Snap-Container">
+			<div class="Section">
+				<div class="Section-Text">
+					<h1>Connor Majewski</h1>
+					
+					<p>
+						Hi, my name is Connor Majewski.
+					</p>
+					
+					<p>
+						I'm a computer science graduate currently looking for work.
+					</p>
+					
+					<p>
+						This site is a way for me to showcase some of the projects and hobbies I have worked on.
+					</p>
+					
+					<p>
+						I hope you enjoy.
+					</p>
+				</div>
+				
+			</div>
+
+		
+
+			<div class="Section">
+				<div class="Section-Text">
+					<h1><a href="https://github.com/connormajewski/ModelManager" target="blank">ModelManager</a></h1>
+				
+					<p id="Model-Text">
+						I recently built a desktop application to manage a collection of over 4,000 scale models. 
+						I spent weeks collecting information on each model before turning everything into a functional database. 
+						I then used the Ebay API to connect the app to a user's account to create listings.
+					</p>
+				</div>
+			
+				<div class="Section-Images">
+					<div class="carousel-track">
+					<video src="media/ebay.mp4" autoplay muted loop></video>
+					<img src="media/modelmanager1.jpg" alt="Model Manager 1">
+					<img src="media/modelmanager2.jpg" alt="Model Manager 2">
+					<img src="media/modelmanager3.jpg" alt="Model Manager 3">
+					<img src="media/modelmanager4.jpg" alt="Model Manager 4">
+				  </div>
+				</div>
+
+			</div>
+
+		
+			<div class="Section">
+				<div class="Section-Text">
+					<h1><a href="https://github.com/connormajewski/SDL2-Mock-Inspector" target="blank">Shape Inspector</a></h1>
+					
+					<p id="Shape-Text">
+						I used the SDL2 library to create a shape inspector tool, to learn about simple graphics programming. Shapes can be rotated and brought closer or further from the screen.
+					</p>
+				</div>
+				
+				<div class="Section-Images">
+					<div class="carousel-track">
+					<video src="media/shapes.mp4" autoplay muted loop></video>
+				  </div>
+				</div>
+				
+			</div>
+			
+			<div class="Section">
+				<div class="Section-Text">
+					<h1><a href="https://github.com/connormajewski/Song-Randomizer/tree/master" target="blank">Communal Playlist</a></h1>
+					
+					<p id="Song-Text">
+						This is a working demo I made of a communal playlist site, where users could use the YouTube API to add a link to a backend database, and receive a random song from the playlist when needed.
+					</p>
+					
+				</div>
+				
+				<div class="Section-Images">
+					<div class="carousel-track">
+					<video src="media/communal.mp4" autoplay controls loop></video>
+				  </div>
+				</div>
+			</div>
+			
+			
+			<div class="Section">
+				<div class="Section-Text">
+					<h1><a href="https://www.youtube.com/@imskjawe" target="blank">imskjawe</a></h1>
+					
+					<p id="Bass-Text">
+						In my spare time, I run a small YouTube channel, where I upload bass transcriptions and covers. I started transcribing as a way to improve my listening and playing skills. I've uploaded around 30 videos so far, with no plans to stop.
+					</p>
+					
+				</div>
+				
+				<div class="Section-Images">
+					<div class="carousel-track">
+					<video src="media/youtube.mp4" controls loop></video>
+					<img src="media/bass.jpg" alt="Bass 1">
+					<img src="media/bass2.jpg" alt="Bass 2">
+				  </div>
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		<script>
+			console.log("TEST TEXT")
+			document.addEventListener("DOMContentLoaded", () => {
+			
+				const isScreenLarge = window.matchMedia('(min-width: 1001px)');
+				const isScreenComputer = window.matchMedia('(min-width: 500px)');
+				
+				const modelText = document.getElementById('Model-Text');
+				const bassText = document.getElementById('Bass-Text');
+				const shapeText = document.getElementById('Shape-Text');
+				const songText = document.getElementById('Song-Text');
+				
+				 function updateText(){
+				 
+					if(isScreenLarge.matches || isScreenComputer.matches){
+					
+						modelText.innerHTML = "I recently built a desktop application to manage a collection of over 4,000 scale models. I spent weeks collecting information on each model before turning everything into a functional database. I used customtkinter to create a GUI to view and edit the database, and wrote a small library to use Ebay API calls to allow models to be listed for sale directly from within the app. Results can then be exported to an xlsx file for viewing and sharing."
+						shapeText.innerHTML = "I used the SDL2 library to create a shape inspector tool, to learn about simple graphics programming. Shapes can be rotated and brought closer or further from the screen. Even though this is a pretty basic project, I still had a lot of fun with it."
+						songText.innerHTML = "This is a working demo I made of a communal playlist site, where users could use the YouTube API to add a link to a backend database, and receive a random song from the playlist when needed. I used Django for everything, it was a fun project to work on."
+						bassText.innerHTML = "In my spare time, I run a small YouTube channel, where I upload bass transcriptions and covers. I started transcribing as a way to improve my listening and playing skills. Most of the time I'll just be listening to a song somewhere and decide to learn it. It's fun working through a song and really feeling like I've learned it. I've uploaded around 30 videos so far, with no plans to stop."
+					}
+					
+					else{
+					
+						modelText.innerHTML = "I recently built a desktop application to manage a collection of over 4,000 scale models. I spent weeks collecting information on each model before turning everything into a functional database. I then connected the Ebay API to the app to allow models to be listed for sale."
+						shapeText.innerHTML = "I used the SDL2 library to create a shape inspector tool, to learn about simple graphics programming. Shapes can be rotated and brought closer or further from the screen."
+						songText.innerHTML = "This is a working demo I made of a communal playlist site, where users could use the YouTube API to add a link to a backend database, and receive a random song from the playlist when needed."
+						bassText.innerHTML = "In my spare time, I run a small YouTube channel, where I upload bass transcriptions and covers. I started transcribing as a way to improve my listening and playing skills. I've uploaded around 30 videos so far, with no plans to stop."
+					}
+				 
+				 }
+				 
+				updateText();
+
+				isScreenLarge.addEventListener('change', updateText);
+				 
+			});
+			 
+		</script>
+		
+	</body>
+</html>

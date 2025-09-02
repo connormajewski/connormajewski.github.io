@@ -41,11 +41,10 @@
 			<div class="Section">
 				<div class="Section-Text">
 					<h1><a href="https://github.com/connormajewski/ModelManager" target="blank">ModelManager↗</a></h1>
+					<h2><i>Python, SQL</i></h2>
 				
 					<p id="Model-Text">
-						I recently built a desktop application to manage a collection of over 4,000 scale models. 
-						I spent weeks collecting information on each model before turning everything into a functional database. 
-						I then used the Ebay API to connect the app to a user's account to create listings.
+						I recently built a desktop application to manage a collection of over 4,000 scale models. I spent a week at the location collecting data using a Python program I wrote, which uses the <b><a href="https://github.com/KoljaB/RealtimeSTT">RealTimeSST↗</a></b> and <b><a href="https://openpyxl.readthedocs.io/en/stable/">OpenPyXL↗</a></b> libraries to send a basic transcription of model information to an Excel spreadsheet. After collecting the rudimentary data, I spent the next couple of weeks cleaning it, again using OpenPyXL to automatically clean and update the spreadsheet. To find the estimated value of each model, I originally wrote a program to scrape eBay, find the closest matches and average their cost, but ran into issues with similar items having wildly different names. </br></br> Once all the data was cleaned, I used <b>sqlite3</b> to convert the spreadsheet into a database file. I used <b><a href="https://customtkinter.tomschimansky.com/">customTkinter↗</a></b> to design a GUI frontend that allows a user to easily perform CRUD commands. Models can be searched, filtered, updated, added, and deleted, and results can be sent to an Excel file for future use. </br></br> I then started working on connecting the program to eBay. I wrote a basic helper library that would allow me to make calls to eBay, using a mix of the RESTful and Trading APIs. When listing a model for sale inside the program, all that is needed is the dimensions, weight, and at least one image. Shipping costs are automatically calculated when creating the listing. The biggest bottleneck to this was having to upload images. I am calling eBay Picture Service when images are uploaded, which works, but is very slow.
 					</p>
 				</div>
 			
@@ -64,9 +63,11 @@
 			<div class="Section">
 				<div class="Section-Text">
 					<h1><a href="https://github.com/connormajewski/SDL2-Mock-Inspector" target="blank">Shape Inspector↗</a></h1>
+					<h2><i>C++</i></h2>
+					
 					
 					<p id="Shape-Text">
-						I used the SDL2 library to create a shape inspector tool, to learn about simple graphics programming. Shapes can be rotated and brought closer or further from the screen.
+						I used the <b><a href=”https://www.libsdl.org/”>SDL2↗</a></b> library to create a shape inspector tool to become more familiar with C++ and basic graphics programming. I created a couple of basic shapes, and then added functions to display the shape to the screen. I then synced the rotation of shapes to mouse movement, so that moving the mouse up, down, left, and right rotates the shape in the same direction. The program can also plot arbitrary points from a given list.
 					</p>
 				</div>
 				
@@ -80,10 +81,11 @@
 			
 			<div class="Section">
 				<div class="Section-Text">
-					<h1><a href="https://github.com/connormajewski/Song-Randomizer/tree/master" target="blank">Communal Playlist↗</a></h1>
+					<h1><a href="https://github.com/connormajewski/Song-Randomizer/tree/master" target="blank">Playlist↗</a></h1>
+					<h2><i>HTML\CSS, JavaScript, Python</i></h2>
 					
 					<p id="Song-Text">
-						This is a working demo I made of a communal playlist site, where users could use the YouTube API to add a link to a backend database, and receive a random song from the playlist when needed.
+						I started this project because I wanted a simple basic demo of an idea I had. I wanted to make a simple site where users can add and retrieve song links on YouTube through a site-wide playlist of sorts. I used the YouTube v3 API with Python for song searching, <b>sqlite</b> for storing and retrieving song links, and <b><a href=”https://www.djangoproject.com/”>Django↗</a></b> for overall website structure and content handling.
 					</p>
 					
 				</div>
@@ -96,12 +98,12 @@
 			</div>
 			
 			
-			<div class="Section">
+			<div class="Section" id="Bottom-Level">
 				<div class="Section-Text">
 					<h1><a href="https://www.youtube.com/@imskjawe" target="blank">imskjawe↗</a></h1>
 					
 					<p id="Bass-Text">
-						In my spare time, I run a small YouTube channel, where I upload bass transcriptions and covers. I started transcribing as a way to improve my listening and playing skills. I've uploaded around 30 videos so far, with no plans to stop.
+						I’ve been playing bass for a couple of years now, and a year ago, I started a YouTube channel as a hobby to post bass line transcriptions in order to improve my listening and playing skills. I ended up learning a lot more than I ever thought possible. I learned how to create transcriptions using MuseScore, the basics of audio and video editing using Davinci Resolve, and thumbnail creation using Photoshop. Now, a year later, I feel like I am a much better player for it. Most of the time, I’ll just be listening to a song online and decide to learn it. </br></br> I have posted over 30 videos so far, and have no plans to stop. I am also learning to play guitar, and my hope is that I’ll be at a good enough level someday to start doing guitar transcriptions as well. 
 					</p>
 					
 				</div>
@@ -118,7 +120,7 @@
 			
 		</div>
 		
-		<script>
+		<!-- <script>
 			console.log("TEST TEXT")
 			document.addEventListener("DOMContentLoaded", () => {
 			
@@ -134,7 +136,7 @@
 				 
 					if(isScreenLarge.matches){
 					
-						modelText.innerHTML = "I recently built a desktop application to manage a collection of over 4,000 scale models. I spent weeks collecting information on each model before turning everything into a functional database. I used customtkinter to create a GUI to view and edit the database, and wrote a small library to use Ebay API calls to allow models to be listed for sale directly from within the app. Results can then be exported to an xlsx file for viewing and sharing."
+						modelText.innerHTML = "I recently built a desktop application to manage a collection of over 4,000 scale models. I spent weeks collecting information on each model before turning everything into a functional database. I used customtkinter to create a GUI to view and edit the database, and wrote a small library to use Ebay API calls to allow models to be listed for sale directly from within the app. Results can then be exported to an xlsx file for viewing and sharing. I recently built a desktop application to manage a collection of over 4,000 scale models. I spent weeks collecting information on each model before turning everything into a functional database. I used customtkinter to create a GUI to view and edit the database, and wrote a small library to use Ebay API calls to allow models to be listed for sale directly from within the app. Results can then be exported to an xlsx file for viewing and sharing. I recently built a desktop application to manage a collection of over 4,000 scale models. I spent weeks collecting information on each model before turning everything into a functional database. I used customtkinter to create a GUI to view and edit the database, and wrote a small library to use Ebay API calls to allow models to be listed for sale directly from within the app. Results can then be exported to an xlsx file for viewing and sharing."
 						shapeText.innerHTML = "I used the SDL2 library to create a shape inspector tool, to learn about simple graphics programming. Shapes can be rotated and brought closer or further from the screen. Even though this is a pretty basic project, I still had a lot of fun with it."
 						songText.innerHTML = "This is a working demo I made of a communal playlist site, where users could use the YouTube API to add a link to a backend database, and receive a random song from the playlist when needed. I used Django for everything, it was a fun project to work on."
 						bassText.innerHTML = "In my spare time, I run a small YouTube channel, where I upload bass transcriptions and covers. I started transcribing as a way to improve my listening and playing skills. Most of the time I'll just be listening to a song somewhere and decide to learn it. It's fun working through a song and really feeling like I've learned it. I've uploaded around 30 videos so far, with no plans to stop."
@@ -142,7 +144,7 @@
 					
 					else{
 					
-						modelText.innerHTML = "I recently built a desktop application to manage a collection of over 4,000 scale models. I spent weeks collecting information on each model before turning everything into a functional database. I then connected the Ebay API to the app to allow models to be listed for sale."
+						modelText.innerHTML = "I recently built a desktop application to manage a collection of over 4,000 scale models. I spent weeks collecting information on each model before turning everything into a functional database. I used customtkinter to create a GUI to view and edit the database, and wrote a small library to use Ebay API calls to allow models to be listed for sale directly from within the app. Results can then be exported to an xlsx file for viewing and sharing. I recently built a desktop application to manage a collection of over 4,000 scale models. I spent weeks collecting information on each model before turning everything into a functional database. I used customtkinter to create a GUI to view and edit the database, and wrote a small library to use Ebay API calls to allow models to be listed for sale directly from within the app. Results can then be exported to an xlsx file for viewing and sharing. I recently built a desktop application to manage a collection of over 4,000 scale models. I spent weeks collecting information on each model before turning everything into a functional database. I used customtkinter to create a GUI to view and edit the database, and wrote a small library to use Ebay API calls to allow models to be listed for sale directly from within the app. Results can then be exported to an xlsx file for viewing and sharing."
 						shapeText.innerHTML = "I used the SDL2 library to create a shape inspector tool, to learn about simple graphics programming. Shapes can be rotated and brought closer or further from the screen."
 						songText.innerHTML = "This is a working demo I made of a communal playlist site, where users could use the YouTube API to add a link to a backend database, and receive a random song from the playlist when needed."
 						bassText.innerHTML = "In my spare time, I run a small YouTube channel, where I upload bass transcriptions and covers. I started transcribing as a way to improve my listening and playing skills. I've uploaded around 30 videos so far, with no plans to stop."
@@ -156,7 +158,7 @@
 				 
 			});
 			 
-		</script>
+		</script> -->
 		
 	</body>
 </html>
